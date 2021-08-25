@@ -88,12 +88,21 @@ const applyOp = (op, b, a) => {
 };
 function calculate1()
 {
-// let ss = calculate(s1)
-console.log(document.calc.output.value);
-let ss = calculate(document.calc.output.value);
+    // let ss = calculate(s1)
+    console.log(document.calc.output.value);
+    let ss = calculate(document.calc.output.value);
+    console.log(ss);
+    let err = "invalid input"
+    if(isNaN(ss) )
+    {
+        
+        document.calc.output.value = err;
+    }
+    else{
+        document.calc.output.value = ss;
+        console.log(ss);
+    }
 
-document.calc.output.value = ss;
-console.log(ss);
 }
 let sss = document.calc.output.value;
 
