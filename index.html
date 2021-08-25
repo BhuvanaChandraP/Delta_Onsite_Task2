@@ -5,44 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form name="calc" >
-        <input type="text" name="output" placeholder="Enter" disabled="disabled"><br>
-        <input type="button" value=" 1 " onclick="document.calc.output.value+='1'" >
-		<input type="button" value=" 2 " onclick="document.calc.output.value+='2'" >
-		<input type="button" value=" 3 " onclick="document.calc.output.value+='3'">
-		<input type="button" value=" / " onclick="document.calc.output.value+='/'" >
-		<!-- <br> -->
+    <div id="container">
+        <form name="calc" >
+            <div id = "contain">
+                <input type="text" name="output" placeholder="" ><br>
+            </div>
+           
+            <div id = "contain1">
+                    <input type="button" value=" del " onclick="cut()" style="font-size: small;padding: 5px;">
+                    <input type="button" value="sqrt" onclick="sq()" style="font-size: small;padding: 5px;">
+                    <input type="button" value=" sin " onclick="sin()" style="font-size: small;padding: 5px;">
+                    <input type="button" value=" cos " onclick="cos()" style="font-size: small;padding: 5px;">
+                    <input type="button" value=" tan " onclick="tan()" style="font-size: small;padding: 5px;">
+                    <input type="button" value=" sqr " onclick="square()" style="font-size: small;padding: 5px;" >
+                    <input type="button" value=" cube " onclick="cube()" style="font-size: small;padding: 5px;" >
+                    <input type="button" value=" inv " onclick="inverse()" style="font-size: small;padding: 5px;">
+                    <input type="button" value=" log " onclick="log()" style="font-size: small;padding: 5px;">
+                    <input type="button" value=" exp " onclick="exp()" style="font-size: small;padding: 5px;">
+                    <!-- <input type="button" value="power" onclick="document.calc.output.value+='**'" style="font-size: small;padding: 5px;" > -->
+                    <input type="button" value=" ! " onclick="Factorial()" >
+                    <input type="button" value=" / " onclick="document.calc.output.value+='/'"  class = "mark">
+                    <input type="button" value=" 1 " onclick="document.calc.output.value+='1'" >
+                    <input type="button" value=" 2 " onclick="document.calc.output.value+='2'" >
+                    <input type="button" value=" 3 " onclick="document.calc.output.value+='3'">
+                   
+                    
+
+                    <input type="button" value=" * " onclick="document.calc.output.value+='*'"  class = "mark">
+                    <input type="button" value=" 4 " onclick="document.calc.output.value+='4'" >
+                    <input type="button" value=" 5 " onclick="document.calc.output.value+='5'" >
+                    <input type="button" value=" 6 " onclick="document.calc.output.value+='6'" >
+                    
+                    
+                    <input type="button" value=" + " onclick="document.calc.output.value+='+'"  class = "mark">
+                    <input type="button" value=" 7 " onclick="document.calc.output.value+='7'" >
+                    <input type="button" value=" 8 " onclick="document.calc.output.value+='8'" >
+                    <input type="button" value=" 9 " onclick="document.calc.output.value+='9'" >
+                    <input type="button" value=" - " onclick="document.calc.output.value+='-'" class = "mark">
+                    
+
+                    <input type="button" value=" ( " onclick="document.calc.output.value+='('" >
+                    <input type="button" value=" ) " onclick="document.calc.output.value+=')'" >
+                    <input type="button" value=" 0 " onclick="document.calc.output.value+='0'" >
+                    <!-- <input type="button" value=" + " onclick="document.calc.output.value+='+'" > -->
+                    
 
 
-		<input type="button" value=" 4 " onclick="document.calc.output.value+='4'" >
-		<input type="button" value=" 5 " onclick="document.calc.output.value+='5'" >
-		<input type="button" value=" 6 " onclick="document.calc.output.value+='6'" >
-		<input type="button" value=" * " onclick="document.calc.output.value+='*'" >
-		<!-- <br> -->
-
-		<input type="button" value=" 7 " onclick="document.calc.output.value+='7'" >
-		<input type="button" value=" 8 " onclick="document.calc.output.value+='8'" >
-		<input type="button" value=" 9 " onclick="document.calc.output.value+='9'" >
-		<input type="button" value=" - " onclick="document.calc.output.value+='-'" >
-		<!-- <br> -->
-
-		<input type="button" value=" ( " onclick="document.calc.output.value+='('" >
-		<input type="button" value=" ) " onclick="document.calc.output.value+=')'" >
-		<input type="button" value=" 0 " onclick="document.calc.output.value+='0'" >
-		<input type="button" value=" + " onclick="document.calc.output.value+='+'" >
-		<!-- <br> -->
 
 
-
-
-		<input type="button" value=" c " onclick="document.calc.output.value =''" >
-		<input type="button" value=" . " onclick="document.calc.output.value+='.'" >
-		<input type="button" value=" = " onclick="calculate1()" >
-		<input type="button" value=" % " onclick="document.calc.output.value+='%'" >
-
-
-    </form>
+                    <input type="button" value=" c " onclick="document.calc.output.value =''" class = "mark">
+                    <input type="button" value=" . " onclick="document.calc.output.value+='.'" class = "mark">
+                   
+                    <input type="button"  class = "mark" value=" % " onclick="document.calc.output.value+='%'" >
+                    <input type="button" value=" ^ " onclick="document.calc.output.value+='^'" class = "mark">
+                    <input type="button" value=" = " onclick="calculate1()" id ="eq">
+                    <br>
+            </div>
+        </form>
+    </div>  
+    <script src="script.js"></script>
 </body>
 </html>
