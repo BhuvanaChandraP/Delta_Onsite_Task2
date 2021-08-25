@@ -111,6 +111,15 @@ let sss = document.calc.output.value;
 
 function Factorial() {
     document.calc.output.value = calculate(document.calc.output.value);
+    if(document.calc.output.value == err || isNaN(document.calc.output.value) )
+    {
+        document.calc.output.value = err;
+        
+    }
+    else{
+        
+        document.calc.output.value= document.calc.output.value; 
+    }
 		let n = document.calc.output.value
             var ans=1;
               
@@ -122,57 +131,135 @@ function Factorial() {
           
        
     function exp(){
+       
         document.calc.output.value = calculate(document.calc.output.value);
-        document.calc.output.value= Math.exp(document.calc.output.value); 
+        if(document.calc.output.value == err || isNaN(document.calc.output.value) )
+        {
+            document.calc.output.value = err;
+            
+        }
+        else{
+            
+            document.calc.output.value= Math.exp(document.calc.output.value); 
+        }
+        // document.calc.output.value= Math.exp(document.calc.output.value); 
     }
     function log(){
         document.calc.output.value = calculate(document.calc.output.value);
-        document.calc.output.value= Math.log(document.calc.output.value); 
+        if(document.calc.output.value == err || isNaN(document.calc.output.value) )
+        {
+            document.calc.output.value = err;
+            
+        }
+        else{
+            
+            document.calc.output.value= Math.log(document.calc.output.value); 
+        }
+        
+        //document.calc.output.value= Math.log(document.calc.output.value); 
     }
     function inverse(){
         document.calc.output.value = calculate(document.calc.output.value);
-        document.calc.output.value= 1/document.calc.output.value;
+        if(document.calc.output.value == err || isNaN(document.calc.output.value) )
+        {
+            document.calc.output.value = err;
+            
+        }
+        else{
+            
+            document.calc.output.value= 1/document.calc.output.value; 
+        }
+        
+        //document.calc.output.value= 1/document.calc.output.value;
     }
     function square (){
         document.calc.output.value = calculate(document.calc.output.value);
-        document.calc.output.value= document.calc.output.value*document.calc.output.value; 
+        if(document.calc.output.value == err || isNaN(document.calc.output.value) )
+        {
+            document.calc.output.value = err;
+            
+        }
+        else{
+            
+            document.calc.output.value= document.calc.output.value*document.calc.output.value; 
+        }
+        //document.calc.output.value = calculate(document.calc.output.value);
+        // document.calc.output.value= document.calc.output.value*document.calc.output.value; 
     }
     function cube (){
         document.calc.output.value = calculate(document.calc.output.value);
-        document.calc.output.value= document.calc.output.value*document.calc.output.value*document.calc.output.value; 
+        if(document.calc.output.value == err || isNaN(document.calc.output.value) )
+        {
+            document.calc.output.value = err;
+            
+        }
+        else{
+            
+           // document.calc.output.value= Math.cos(document.calc.output.value); 
+            document.calc.output.value= document.calc.output.value*document.calc.output.value*document.calc.output.value; 
+        }
+        //document.calc.output.value = calculate(document.calc.output.value);
+        // document.calc.output.value= document.calc.output.value*document.calc.output.value*document.calc.output.value; 
     }
      function tan(){
+          document.calc.output.value = calculate(document.calc.output.value);
+        if(document.calc.output.value == err || isNaN(document.calc.output.value) )
+        {
+            document.calc.output.value = err;
+            
+        }
+        else{
+            
+            document.calc.output.value= Math.tan(document.calc.output.value); 
+        }
         document.calc.output.value = calculate(document.calc.output.value);
         document.calc.output.value= Math.tan(document.calc.output.value); 
     }
     function cos(){
        // document.calc.output.value = eval( document.calc.output.value)
-       try{
+      
             document.calc.output.value = calculate(document.calc.output.value);
-            console.log(document.calc.output.value);
+            //console.log(document.calc.output.value);
             if(document.calc.output.value == err || isNaN(document.calc.output.value) )
             {
                 document.calc.output.value = err;
-                console.log("got")
+                
             }
             else{
-                console.log("got1")
+                
                 document.calc.output.value= Math.cos(document.calc.output.value); 
             }
-       }
-       catch{
-           console.log(err);
-       }
+       
         
         
     }
      function sin(){
+       
         document.calc.output.value = calculate(document.calc.output.value);
-        document.calc.output.value= Math.sin(document.calc.output.value); 
+        if(document.calc.output.value == err || isNaN(document.calc.output.value) )
+        {
+            document.calc.output.value = err;
+            
+        }
+        else{
+            
+            document.calc.output.value= Math.sin(document.calc.output.value); 
+        }
+       // document.calc.output.value= Math.sin(document.calc.output.value); 
     }
     function sq(){
+        
         document.calc.output.value = calculate(document.calc.output.value);
-        document.calc.output.value= Math.sqrt(document.calc.output.value); 
+        if(document.calc.output.value == err || isNaN(document.calc.output.value) )
+        {
+            document.calc.output.value = err;
+            
+        }
+        else{
+            
+            document.calc.output.value= Math.sqrt(document.calc.output.value); 
+        }
+        //document.calc.output.value= Math.sqrt(document.calc.output.value); 
     }
 	
 function cut(){
