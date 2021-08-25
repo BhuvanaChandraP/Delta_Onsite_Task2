@@ -1,5 +1,6 @@
 
 let s1
+let err = "invalid input"
 function calculate (s){
     console.log(s);
     const values = [];
@@ -79,7 +80,8 @@ const applyOp = (op, b, a) => {
         return a**b;
     case '/':
       if (b === 0) {
-        throw 'Cannot divide by zero';
+        document.calc.output.value = err;
+        //throw 'Cannot divide by zero';
       }
       return (a / b);
       
@@ -92,8 +94,8 @@ function calculate1()
     console.log(document.calc.output.value);
     let ss = calculate(document.calc.output.value);
     console.log(ss);
-    let err = "invalid input"
-    if(isNaN(ss) )
+    
+    if(isNaN(ss))
     {
         
         document.calc.output.value = err;
@@ -145,8 +147,24 @@ function Factorial() {
     }
     function cos(){
        // document.calc.output.value = eval( document.calc.output.value)
-        document.calc.output.value = calculate(document.calc.output.value);
-        document.calc.output.value= Math.cos(document.calc.output.value); 
+       try{
+            document.calc.output.value = calculate(document.calc.output.value);
+            console.log(document.calc.output.value);
+            if(document.calc.output.value == err || isNaN(document.calc.output.value) )
+            {
+                document.calc.output.value = err;
+                console.log("got")
+            }
+            else{
+                console.log("got1")
+                document.calc.output.value= Math.cos(document.calc.output.value); 
+            }
+       }
+       catch{
+           console.log(err);
+       }
+        
+        
     }
      function sin(){
         document.calc.output.value = calculate(document.calc.output.value);
